@@ -1,0 +1,295 @@
+#home{
+    background: #dac89d;
+    display: block;
+    width: 100%;
+    min-height: 150vh;
+    height: auto;
+    position: relative;
+    color: white;
+    margin-top: -70px;
+    z-index: 0;
+    
+}
+
+#home::before{
+    content: "";
+    position: absolute;
+    height: 150vh;
+    width: 100%;
+    background: url(../IMAGES/house-1836070_1280.jpg) no-repeat;
+    background-size: cover;
+    background-position-x: -350px; 
+    z-index: -1;
+    mix-blend-mode: multiply; 
+    top: 0;
+    left: 0;
+}
+
+#text{
+    height: auto;
+}
+
+#top-animation{
+    min-height: auto;
+    width: 90%;
+    margin: auto;
+}
+
+#top-animation h1{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 170px 0 27px;
+    font-size: 3em;
+    position: relative;
+    max-height: 120px;
+    animation: Show 600ms forwards ease-in;   
+}
+
+
+#top-animation h1::before{
+    content: "";
+    height: 120px;
+    top: 170px;
+    left: 20px;
+    right: 220px;
+    background-color: white;
+    position: absolute;
+    animation: toRight 600ms ease-in forwards;
+}
+
+#top-animation p{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#top-animation button{
+    background-color: white;
+    border: 0;
+    border-radius: 50px;
+    padding: 2% 4%;
+    margin: 4% 10%;
+}
+
+
+#landing-animation{
+    width: 96%;
+    margin: 30px auto 0;
+    position: relative;
+}
+
+#icon1{
+    font-size: 30px;
+}
+
+#icon2, #icon3{
+    font-size: 25px;
+}
+
+.moving-icons{
+    box-sizing: border-box;
+    width: 80%;
+    padding: 3%;
+    margin-left: 10%;
+    position: absolute;
+    top: -91%;
+    opacity: 0;
+    animation: dropDown .8s ease-in forwards;
+}
+
+.moving-icons:nth-child(2){
+    animation: dropDown1 .8s ease-in forwards .5s;
+    /* transform: translateY(-91%); */
+}
+
+.moving-icons:nth-child(3){
+    /* transform: translateY(-209%); */
+    animation: dropDown2 1.6s ease-in forwards .10s;
+}
+
+.moving-icons:hover{
+    background-color:  color-mix(in srgb, transparent 80%, white 20%);
+}
+
+.moving-icons h3{
+    margin: 8px 0 2px;
+}
+
+.moving-icons p{
+    margin-top: 2px;
+}
+
+
+/*************************************
+        ANIMATIONS
+*************************************/
+
+
+@keyframes dropDown {
+    0%{
+        opacity: 0;
+        transform: translateY(-91%);
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes dropDown1 {
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(91%);
+    }
+}
+
+@keyframes dropDown2 {
+    0%{
+        opacity: 0;
+        transform: translateY(0);
+    }
+    30%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(209%);
+    }
+}
+
+
+/*************************************
+        RESPONSIVENESS
+*************************************/
+
+@media screen and (min-width : 425px){
+
+    #top-animation h1::before{
+        left: 10px;
+        right: 340px;
+    }
+
+    #top-animation p{
+        width: 90%;
+        font-size: 20px;
+    }
+
+    #top-animation button{
+        font-size: 18px;
+        font-weight: 800;
+        padding: 2.5% 4.5%;
+        margin: 4% 5%;
+    }
+
+    #icon1{
+        font-size: 35px;
+    }
+    
+    #icon2, #icon3{
+        font-size: 28 px;
+    }
+    
+    .moving-icons{
+        box-sizing: border-box;
+        width: 80%;
+        padding: 3%;
+        margin-left: 10%;
+        position: absolute;
+        top: -91%;
+        opacity: 0;
+        animation: dropDown .8s ease-in forwards;
+    }
+}
+
+@media screen and (min-width : 768px){
+
+    #top-animation h1{
+        width: 86%;
+        text-align: left;
+        margin: auto;
+    }
+
+    #landing-animation{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        gap: 1.5%;
+    }
+
+    .moving-icons{
+        position: initial;
+        display: block;
+        animation: moveLeft .8s ease-in-out forwards;
+        inset: 0;
+        margin: 0;
+        width: 32%;
+        opacity: 1;
+    }
+
+    .moving-icons:nth-child(2){
+        animation: moveLeft1 .8s ease-in-out forwards .5s;
+    }
+    
+    .moving-icons:nth-child(3){
+        animation: moveLeft2 1.6s ease-in-out forwards .10s;
+    }
+
+    /*************************************
+            ANIMATIONS
+    *************************************/
+
+
+    @keyframes moveLeft {
+        0%{
+            opacity: 0;
+            transform: translateY(-90%);
+        }
+        30%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes moveLeft1 {
+        0%{
+            opacity: 0;
+            transform: translateY(-90%);
+        }
+        30%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes moveLeft2 {
+        0%{
+            opacity: 0;
+            transform: translateY(-90%);
+        }
+        30%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+}
+

@@ -1,0 +1,367 @@
+:root{
+    --light-primary-color: 
+    --light-secondary-color:
+    --light-background-color:
+    --dark-primary-color:
+    --dark-secondary-color:
+    --dark-background-color: 
+}
+
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#header-small{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+    background-color: transparent;
+    position: fixed;
+    z-index: 50;
+    top: 0;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5%;
+    width: 70%;
+}
+
+.logo a{
+    display: flex;
+    width: 90%;
+    color: #dac89d;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo a div{
+    width: 10%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    width: 30%;
+    color: white;
+}
+
+#third{
+    position: relative;
+}
+
+#Search{
+    transition: all .4s;
+    transform: scale(1);
+    visibility: visible;
+    position: absolute;
+    top: -8px;
+}
+
+#x{
+    transition: all .4s;
+    transform: scale(1);
+    visibility: visible;
+    position: absolute;
+    top: -8px;
+
+}
+
+#Search.faded, #x.faded{
+    transform: scale(.2);
+    visibility: hidden;
+    position: absolute;
+    top: -8px;
+}
+
+#header-big{
+    display: none;
+}
+  
+
+#search{
+    display: block;
+    width: 200px;
+    z-index: 100;
+    position: fixed;
+    right: 10px;
+    left: 30%;
+    top: 5%;
+}
+
+
+/*************************************
+        LOGIN PAGE
+*************************************/
+
+#section{
+    font-family: Helvetica, Arial, sans-serif;
+    background: url(../IMAGES/pexels-binyaminmellish-1396122.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    mix-blend-mode: color-burn;
+    /* background-color: green; */
+}
+
+#container {
+    width: 90%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+}
+
+input{
+    box-sizing: border-box;
+    width: 90%;
+    margin:  10px auto;
+    padding: 10px 5%;
+    display: block;
+    outline: none;
+    border-radius: 5px;
+    border: 1pt solid black;
+}
+
+button{
+    display: block;
+}
+
+#signin-header, #signup-header{
+    text-align: center;
+}
+
+#signin-body{
+    margin: auto;
+    width: 95%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form input{
+    border: 1pt solid rgb(56, 57, 55);
+    color: rgb(113, 113, 113);
+    transition: all .7s;
+}
+
+form input:active, form input:focus{
+    border: 1.2pt solid #0dcaf0;
+    box-shadow: 0 0 10px #9affff;
+}
+
+/* form input:invalid{
+    border: 1.2pt solid #f00d0d;
+    box-shadow: 0 0 20px #ff9a9a;
+} */
+
+form button{
+    box-sizing: border-box;
+    margin: auto;
+    width: 90%;
+    border-radius: 5px;
+    border: 1pt solid rgb(56, 57, 55);
+    padding: 2% 3%;
+    background-color: #0dcaf0;
+    color: rgb(113, 113, 113);
+}
+
+#main-input{
+    margin-bottom: 0;
+}
+
+.react-aria-TextField{
+    margin: 10px;
+}
+
+.react-aria-Label{
+    font-size: 1.2em;
+}
+
+.react-aria-Text{
+    margin: 0 7%;
+    font-size: .9em;
+}
+
+.link:hover{
+    color: #9affff;
+}
+
+/*************************************
+        TENANT DASHBOARD
+*************************************/
+
+#dashboard-container{
+    background-color: white;
+    background: none;
+    display: block;
+    width: 100%;
+}
+
+
+/*************************************
+        ANIMATIONS
+*************************************/
+
+@keyframes toRight{
+    0%{
+        opacity: 0;
+    }
+    1%{
+        opacity: 1;
+    }
+    30%{
+        left: 20px;
+        right: 20px;
+    }
+    99%{
+        opacity: 1;
+        left: 260px;
+        right: 20px;
+    }
+    100%{
+        left: 260px;
+        right: 20px;
+        opacity: 0;
+    }
+}
+
+@keyframes Show {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+
+/*************************************
+        RESPONSIVENESS
+*************************************/
+
+@media screen and (min-width : 425px){
+
+    .logo{
+        width: 60%;
+    }
+
+    .logo a{
+        justify-content: center;
+        gap: 8%;
+    }
+
+    .menu{
+        width: 40%;
+    }
+
+
+        
+    /*************************************
+            ANIMATIONS
+    *************************************/
+
+    @keyframes toRight{
+        0%{
+            opacity: 0;
+        }
+        1%{
+            opacity: 1;
+        }
+        30%{
+            left: 10px;
+            right: 10px;
+        }
+        99%{
+            opacity: 1;
+            left: 340px;
+            right: 10px;
+        }
+        100%{
+            left: 340px;
+            right: 10px;
+            opacity: 0;
+        }
+    }
+    
+}
+
+@media screen and (min-width : 768px){
+    #header-small{
+        display: none;
+    }
+
+    #header-big{
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin: 0 5%;
+        background-color: transparent;
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        left: 0;
+    }
+
+    .logo{
+        width: 30%;
+    }
+
+    .menu{
+        width: 70%;
+    }
+
+
+
+    /*************************************
+            LANDING PAGE
+    *************************************/
+
+    #home{
+        background: #dac89d;
+        display: block;
+        width: 100%;
+        min-height: 150vh;
+        height: auto;
+        position: relative;
+        color: white;
+        margin-top: -70px;
+    
+    }
+    
+    #home::before{
+        content: "";
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background: url(../IMAGES/house-1836070_1280.jpg);
+        z-index: -1;
+        right: 92%;
+        border-radius: 50px;
+        animation: left 3s forwards;
+        left: 0;
+        mix-blend-mode: multiply; 
+    }
+
+}

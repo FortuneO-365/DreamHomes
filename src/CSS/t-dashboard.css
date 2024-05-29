@@ -1,0 +1,178 @@
+
+/*************************************
+        DASHBOARD
+*************************************/
+
+#dashboard-container{
+    background-color: white;
+    background: none;
+    display: block;
+    width: 100%;
+}
+
+
+#top-section{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 7px;
+    height: 70px;
+    padding: 0 3%;
+}
+
+.search, .top-icons{
+    min-height: 45px;
+    position: relative;
+    border: 1pt solid;
+    box-sizing: border-box;
+    padding: 3px;
+}
+
+.top-icons{
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-icons svg , .search svg{
+    font-size: 1.2em;
+}
+
+.search{
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width .5s ease-in-out;
+}
+
+.search svg, .search input{
+    position: absolute;
+}
+
+.search input{
+    visibility: visible;
+    opacity: 1;
+    left: 5px;
+    right: 5px;
+}
+
+.search svg{
+    visibility: visible;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+}
+
+.search svg.hidden, .search input.hidden{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.search.hidden{
+    width: 250px;
+}
+
+#toggle svg{
+    position: absolute;
+}
+
+#dashboard-bars{
+    font-size: 1.5em;
+    opacity: 0;
+    visibility: hidden;
+    transform: rotate(90deg);
+    transition: all .7s ease-in-out;
+}
+
+#daxboard-X{
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    transform: rotate(90deg);
+    transition: all .5s ease-in-out;
+}
+
+#dashboard-bars.shown, #daxboard-X.shown{
+    transform: rotate(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+#panel{
+    background-color: white;
+    position: fixed;
+    right: 0;
+    top: 70px;
+    left: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+#panel.shown{
+    visibility: visible;
+    opacity: 1;
+    left: 10%;
+}
+
+#top-panel{
+    width: 100%;
+    /* height: 60px; */
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0 20px;
+    gap: 7%;
+}
+
+#top-panel div:first-child{
+    width: 10%;
+    /* height: 60px; */
+
+}
+#top-panel div:last-child{
+    width: 60%;
+    font-size: 1.2em;
+}
+
+#top-mid-panel{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#top-mid-panel-left{
+    width: 30%;
+}
+
+#top-mid-panel-right{
+    width: 70%;
+}
+
+button{
+    padding: 5% 7%;
+    border-radius: 50px;
+}
+
+#lower-mid-panel div{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0 12px;
+    gap: 5px;
+    height: 50px;
+    margin: 15px 0;
+}
+
+#lower-mid-panel div p{
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.panel-icon{
+    width: 2em;
+    font-size: 2em;
+}
